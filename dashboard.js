@@ -37,11 +37,6 @@ let placeholderData = {
     }
   }
 
-
-// fetch('https://linode.cobaltrisen.com:3000/data').then(res => res.json()).then(data => {
-    // console.log(data)
-// })
-
 function buildCharts(data) {
     console.log(data)
 
@@ -210,5 +205,8 @@ function buildCharts(data) {
 }
 
 window.onload = () => {
-buildCharts(placeholderData)
+    // buildCharts(placeholderData)
+    fetch('https://linode.cobaltrisen.com:3000/data').then(res => res.json()).then(data => {
+        buildCharts(data)
+    })
 }
