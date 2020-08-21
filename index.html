@@ -2,10 +2,55 @@
 <html>
     <head>
         <title>NCSU Covid Dashboard</title>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js" integrity="sha256-R4pqcOYV8lt7snxMQO/HSbVCFRPMdrhAFMH+vr9giYI=" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="main.css">
     </head>
     <body>
-        <h1>bruh</h1>
 
-        <script src="dashboard.js"></script>
+        <main>
+            <h1 class="display">NCSU COVID Tracker</h1>
+            <h1>New Daily Cases</h1>
+            <div class="chart-container">
+                <canvas id="new-cases"></canvas>
+            </div>
+
+            <div class="row">
+                <div>
+                    <h1>Cumulative Total Cases <sub></sub></h1>
+                    <div class="chart-container">
+                        <canvas id="cumulative-cases"></canvas>
+                    </div>
+                </div>
+                <div>
+                    <h1>R<sub>t</sub> - Effective Reproduction Number</h1>
+                    <div class="chart-container">
+                        <canvas id="rt"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div>
+                    <h1>Quarantine Housing Units</h1>
+                    <div class="chart-container">
+                        <canvas id="quarantine"></canvas>
+                    </div>
+                </div>
+                <div>
+                    <h1>Quarantined Individuals</h1>
+                    <div class="chart-container">
+                        <canvas id="quarantine-ind"></canvas>
+                    </div>
+                </div>
+            </div>
+            
+
+            <footer>
+                <p>Source: <a href="https://www.ncsu.edu/coronavirus/testing-and-tracking/">NCSU Coronavirus Testing and Tracking</a></p>
+                <em>The data presented on this website is not guaranteed to be correct. Please exercise caution in interpreting it. The operator of this website is not liable for consequences of decisions made based upon this data.</em>
+                <script src="dashboard.js"></script>
+            </footer>
+        </main>
+       
     </body>
 </html>
